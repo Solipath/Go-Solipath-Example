@@ -6,6 +6,7 @@ To run tests from the command line:
 ```
 
 If you have vscode so you can start it from the command line
+
 Running the following command would start up vscode with path variables set from solipath
 ```bash
 ./solipath code .
