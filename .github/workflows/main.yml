@@ -7,19 +7,4 @@ on:
   workflow_dispatch:
 jobs:
   build:
-
-    runs-on: ${{matrix.os}}
-
-    strategy: 
-      matrix:
-        include:
-          - os: macos-latest
-            command: ./solipath go test
-          - os: ubuntu-latest
-            command: ./solipath go test
-          - os: windows-latest
-            command: .\solipath.bat go test
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run tests
-      run: ${{matrix.command}}
+    uses: Solipath/Go-Solipath-Example/.github/workflows/_build.yml@main
